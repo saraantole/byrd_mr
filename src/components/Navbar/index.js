@@ -10,32 +10,39 @@ const Navbar = () => {
 
     return (
         <Header path={url.pathname}>
-            <nav>
-                {url.pathname === '/'
-                    ? <Link to=''>Store</Link>
-                    : <Link to=''>
-                        <FacebookIcon />
-                    </Link>
-                }
-                {url.pathname === '/'
-                    ? <Link to='/tutorials'>Tutorials</Link>
-                    : <Link to=''>
-                        <TwitterIcon />
-                    </Link>
-                }
-
-            </nav>
-            <Link to='/'>
-                <img width={url.pathname === '/' ? 216 : 176} src={defaultLogo} />
+            <Link to='/' id='img'>
+                <img width={url.pathname === '/' ? 216 : 176} src={defaultLogo} alt='logo' />
             </Link>
             <nav>
-                {url.pathname === '/' && window.innerWidth > 786
-                    ? <>
-                        <Link to=''>Blog</Link>
-                        <Link to='/contact'>Contact</Link>
-                    </>
-                    : <HamburgerMenu />
-                }
+                <ul>
+                    <li id='left-menu'>
+                        <ul>
+                            {url.pathname === '/'
+                                ? <li><Link to=''>Store</Link></li>
+                                : <li><Link to=''>
+                                    <FacebookIcon />
+                                </Link></li>
+                            }
+                            {url.pathname === '/'
+                                ? <li><Link to='/tutorials'>Tutorials</Link></li>
+                                : <li><Link to=''>
+                                    <TwitterIcon />
+                                </Link></li>
+                            }
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            {url.pathname === '/' && window.innerWidth > 786
+                                ? <>
+                                    <li><Link to=''>Blog</Link></li>
+                                    <li><Link to='/contact'>Contact</Link></li>
+                                </>
+                                : <li><HamburgerMenu /></li>
+                            }
+                        </ul>
+                    </li>
+                </ul>
             </nav>
         </Header>
     )
