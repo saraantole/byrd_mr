@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  user-select: none;
 }
 
 @font-face {
@@ -63,5 +64,7 @@ body {
   font-family: 'Archivo', sans-serif;
 }
 
-
+a {
+  text-decoration: none;
+}
 
