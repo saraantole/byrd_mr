@@ -1,6 +1,6 @@
 import { Container } from './styles'
 
-const Details = () => {
+const Tutorials = () => {
     return (
         <Container>
 
@@ -8,4 +8,4 @@ const Details = () => {
     )
 }
 
-export default Details
+export default Tutorials
