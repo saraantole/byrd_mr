@@ -1,13 +1,67 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'Archivo';
+  font-weight: 400;
+  src: local('Archivo'), url(./fonts/Archivo-Regular.ttf) format('truetype');
 }
+
+@font-face {
+  font-family: 'Archivo';
+  font-weight: 400;
+  font-style: italic;
+  src: local('Archivo'), url(./fonts/Archivo-Italic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Archivo';
+    font-weight: 500;
+    src: local('Archivo'), url(./fonts/Archivo-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Archivo';
+  font-weight: 500;
+  font-style: italic;
+  src: local('Archivo'), url(./fonts/Archivo-MediumItalic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Archivo';
+    font-weight: 600;
+    src: local('Archivo'), url(./fonts/Archivo-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Archivo';
+  font-weight: 600;
+  font-style: italic;
+  src: local('Archivo'), url(./fonts/Archivo-SemiBoldItalic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Archivo';
+  font-weight: 700;
+  src: local('Archivo'), url(./fonts/Archivo-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Archivo';
+  font-weight: 700;
+  font-style: italic;
+  src: local('Archivo'), url(./fonts/Archivo-BoldItalic.ttf) format('truetype');
+}
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Archivo', sans-serif;
+}
+
+
+
