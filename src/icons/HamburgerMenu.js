@@ -73,7 +73,7 @@ const SideMenu = styled.div`
         }
     }
 
-    @media screen and (max-width: 786px) {
+    @media screen and (max-width: 950px) {
         div {
             flex-direction: column-reverse;
 
