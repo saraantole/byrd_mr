@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Header = styled.header`
     position: fixed;
+    z-index: 1;
     width: 100%;
 
     #img {
