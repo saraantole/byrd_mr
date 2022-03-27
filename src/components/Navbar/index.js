@@ -11,21 +11,21 @@ const Navbar = () => {
     return (
         <Header path={url.pathname}>
             <Link to='/' id='img'>
-                <img width={url.pathname === '/' ? 216 : 176} src={defaultLogo} alt='logo' />
+                <img src={defaultLogo} alt='logo' />
             </Link>
             <nav>
                 <ul>
                     <li id='left-menu'>
                         <ul>
                             {url.pathname === '/'
-                                ? <li><Link to=''>Store</Link></li>
-                                : <li><Link to=''>
+                                ? <li><Link to='#'>Store</Link></li>
+                                : <li><Link to='#'>
                                     <FacebookIcon />
                                 </Link></li>
                             }
                             {url.pathname === '/'
                                 ? <li><Link to='/tutorials'>Tutorials</Link></li>
-                                : <li><Link to=''>
+                                : <li><Link to='#'>
                                     <TwitterIcon />
                                 </Link></li>
                             }
@@ -33,13 +33,9 @@ const Navbar = () => {
                     </li>
                     <li>
                         <ul>
-                            {url.pathname === '/' && window.innerWidth > 786
-                                ? <>
-                                    <li><Link to=''>Blog</Link></li>
-                                    <li><Link to='/contact'>Contact</Link></li>
-                                </>
-                                : <li><HamburgerMenu /></li>
-                            }
+                            <li className='right-menu'><Link to='#'>Blog</Link></li>
+                            <li className='right-menu'><Link to='/contact'>Contact</Link></li>
+                            <li id='hamburger-icon'><HamburgerMenu /></li>
                         </ul>
                     </li>
                 </ul>

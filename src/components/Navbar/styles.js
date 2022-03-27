@@ -9,6 +9,12 @@ export const Header = styled.header`
         left: 50%;
         transform: translate(-50%, 0);
         top: ${({ path }) => path === '/' ? '50px' : '38px'};
+        padding: 0;
+
+        img {
+            width: ${({ path }) => path === '/' ? '216px' : '176px'}; 
+        }
+        
     }
 
     ul {
@@ -17,11 +23,23 @@ export const Header = styled.header`
     }
 
     nav > ul {
-        padding: ${({ path }) => path === '/' ? '60px 135px' : '40px 33px'};
+        padding: ${({ path }) => path === '/' ? '60px 135px' : '40px 35px'};
         justify-content: space-between;
         align-items: center;
-        
     } 
+
+    nav > ul > li {
+        width: 50%;
+
+        &:nth-of-type(2) {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        li:nth-of-type(even) {
+            margin-left: 55px;
+        }
+    }
 
     a {
         font-weight: 500;
@@ -32,22 +50,41 @@ export const Header = styled.header`
         letter-spacing: 1px;
         color: ${({ theme }) => theme.colors.black};
 
-        &:nth-child(odd) {
-            padding-right: 55px;
-        }
-
         svg {
             opacity: 20%;
         }
     }
 
-    @media screen and (max-width: 786px) {
-        #left-menu {
-            opacity: 0;
+    .right-menu {
+        visibility: ${({ path }) => path === '/' ? 'visible' : 'hidden'};
+    }
+
+    #hamburger-icon {
+        visibility: ${({ path }) => path === '/' ? 'hidden' : 'visible'};
+    }
+
+    @media screen and (max-width: 970px) {
+        #left-menu, .right-menu {
+            visibility: hidden;
+            width: 50%;
+        }
+
+        #hamburger-icon {
+            visibility: visible;
         }
 
         nav > ul {
             padding: 40px 33px;
         } 
+    }
+
+    @media screen and (max-width: 600px) {
+        #img {
+            top: 35px;
+
+            img {
+                width: 136px; 
+            }   
+        }
     }
 `
