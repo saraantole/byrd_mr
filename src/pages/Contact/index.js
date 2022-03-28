@@ -13,6 +13,15 @@ const Contact = () => {
 
     const handleSubmit = event => {
         event.preventDefault()
+
+        const nameRegex = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/g
+        const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g
+        const messageRegex = /^[a-zA-Z0-9\s',.?!@;:-]+$/g
+
+        if (!inputs.name.match(nameRegex)) { return alert('Please, insert a valid name.') }
+        if (!inputs.email.match(emailRegex)) { return alert('Please, insert a valid email.') }
+        if (!inputs.message.match(messageRegex)) { return alert('Please, insert a valid message.') }
+
         alert(`Hi, ${inputs.name}. Your message was submitted! You can check your console`)
         console.log(inputs)
         // TODO: handle form submission
