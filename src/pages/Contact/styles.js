@@ -10,17 +10,16 @@ export const Container = styled.main`
 
     form {
         width: 658px;
-        height: 485px;
     }
 
     label {
-        font-weight: 500;
+        font-weight: 700;
         font-size: 14px;
         line-height: 15px;
         letter-spacing: 1px;
         text-transform: uppercase;
         color: ${({ theme }) => theme.colors.black};
-        padding-bottom: 10px;
+        padding-bottom: 12px;
     }
 
     input, textarea {
@@ -35,9 +34,9 @@ export const Container = styled.main`
         padding-bottom: 20px;
         margin-bottom: 24px;
 
-        &:placeholder {
+        &::placeholder {
             color: ${({ theme }) => theme.colors.black};
-            opacity: 0.3;
+            opacity: 0.2;
         }
 
         &:focus {
@@ -47,7 +46,7 @@ export const Container = styled.main`
 
     textarea {
         resize: none;
-        height: 80px;
+        height: 120px;
     }
 
     button {
@@ -57,12 +56,38 @@ export const Container = styled.main`
         line-height: 23px;
         color: ${({ theme }) => theme.colors.white};
         background: ${({ theme }) => theme.colors.orange};
-        padding: 22px;
+        padding: 18px 22px;
         border: none;
         cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 224px;
+    }
 
-        svg {
-            margin-left: 5px;
+    @media screen and (max-width: 800px) {
+        form {
+            width: 85%;
+        }
+
+        textarea {
+            height: 200px;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        justify-content: flex-start;
+
+        form {
+           margin-top: 127px;
+        }
+
+        button {
+            width: 100%;
+        }
+
+        textarea {
+            height: 160px;
         }
     }
 `
