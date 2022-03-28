@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import { Header } from './styles'
 import defaultLogo from '../../images/Logo.png'
+import whiteLogo from '../../images/Logo White.png'
 import FacebookIcon from '../../icons/FacebookIcon'
 import TwitterIcon from '../../icons/TwitterIcon'
 import HamburgerMenu from '../../icons/HamburgerMenu'
@@ -11,7 +12,7 @@ const Navbar = () => {
     return (
         <Header path={url.pathname}>
             <Link to='/' id='img'>
-                <img src={defaultLogo} alt='logo' />
+                <img src={url.search === '?t=camera' ? whiteLogo : defaultLogo} alt='logo' />
             </Link>
             <nav>
                 <ul>
