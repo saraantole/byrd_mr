@@ -6,6 +6,8 @@ export const Container = styled.main`
     padding: 100px 35px 35px 35px;
     position: relative;
     transition: all 0.4s ease-in-out;
+    display: flex;
+    align-items: center;
 
     #aside {
         bottom: 20%;
@@ -15,37 +17,21 @@ export const Container = styled.main`
         text-align: center;
         letter-spacing: 1px;
         text-transform: uppercase;
-        color: ${({ theme }) => theme.colors.black};
+        color:  ${({ theme, isCameraTutorial }) => isCameraTutorial ? theme.colors.white : theme.colors.black};
         opacity: 0.24;
         transform: rotate(-90deg);
         transform-origin: 0 0;
     }
 
-    #tabs {
-        top: 45%;
-        right: 35px;
-        position: absolute;
-        width: 2px;
-        height: 94px;
-        list-style: none;
+    @media screen and (max-width: 1000px) {
+        padding: 140px 60px 95px 60px;
 
-        li {
-            background: ${({ theme }) => theme.colors.beige};
-            border-radius: 5.5px;
-            width: 2px;
-            height: 30px;
-            margin-bottom: 2px;
-            cursor: pointer;
-        }
-
-        .active {
-            background: ${({ theme }) => theme.colors.orange};
-        }
-    }
-
-    @media screen and (max-width: 800px) {
         #aside {
             display: none;
         }
+    }
+
+    @media screen and (max-width: 600px) {
+        padding: 120px 27px 33px 27px;
     }
 `
