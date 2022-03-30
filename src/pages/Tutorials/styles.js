@@ -33,5 +33,6 @@ export const Container = styled.main`
 
     @media screen and (max-width: 600px) {
         padding: 120px 27px 33px 27px;
+        align-items: flex-start;
     }
 `
