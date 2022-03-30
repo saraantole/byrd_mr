@@ -1,5 +1,5 @@
 import { useSearchParams } from 'react-router-dom'
-import TutorialSteps from '../../components/TutorialSteps'
+import Tutorial from '../../components/Tutorial'
 import { Container } from './styles'
 
 const Tutorials = () => {
@@ -8,7 +8,7 @@ const Tutorials = () => {
     return (
         <Container isCameraTutorial={searchParams.get('t') === 'camera'}>
             <p id='aside'>F-210 Performance Racing Drone</p>
-            <TutorialSteps />
+            <Tutorial />
         </Container>
     )
 }
