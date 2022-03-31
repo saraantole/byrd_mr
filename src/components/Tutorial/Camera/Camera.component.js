@@ -1,4 +1,4 @@
-import { CameraContainer, Description, Details, Tutorial } from './styles'
+import { CameraContainer, Description, Details, Tutorial } from './Camera.styles'
 import CameraImage from '../../../images/camera.png'
 
 const Camera = () => {

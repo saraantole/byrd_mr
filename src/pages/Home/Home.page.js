@@ -1,7 +1,7 @@
-import { Container } from './styles'
+import { Container } from './Home.styles'
 import DroneImage from '../../images/Drone.png'
 
-const Hero = () => {
+const Home = () => {
     return (
         <Container>
             <img src={DroneImage} alt='drone' />
@@ -12,4 +12,4 @@ const Hero = () => {
     )
 }
 
-export default Hero
+export default Home

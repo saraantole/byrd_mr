@@ -1,9 +1,9 @@
-import { TutorialContainer } from './styles'
+import { TutorialContainer } from './Tutorial.styles'
 import { useSearchParams } from 'react-router-dom'
-import Camera from './Camera'
-import Design from './Design'
-import RemoteControl from './RemoteControl'
-import Tabs from './Tabs'
+import Camera from './Camera/Camera.component'
+import Design from './Design/Design.component'
+import RemoteControl from './RemoteControl/RemoteControl.component'
+import Tabs from './Tabs/Tabs.component'
 
 const Tutorial = () => {
     const [searchParams] = useSearchParams()

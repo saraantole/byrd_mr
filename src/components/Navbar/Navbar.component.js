@@ -1,10 +1,10 @@
 import { Link, useLocation } from 'react-router-dom'
-import { Header } from './styles'
+import { Header } from './Navbar.styles'
 import defaultLogo from '../../images/Logo.png'
 import whiteLogo from '../../images/Logo White.png'
 import FacebookIcon from '../../icons/FacebookIcon'
 import TwitterIcon from '../../icons/TwitterIcon'
-import HamburgerMenu from './HamburgerMenu'
+import HamburgerMenu from './HamburgerMenu/HamburgerMenu.component'
 
 const Navbar = () => {
     const url = useLocation()

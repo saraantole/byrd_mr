@@ -1,6 +1,6 @@
 import { useSearchParams } from 'react-router-dom'
-import Tutorial from '../../components/Tutorial'
-import { Container } from './styles'
+import Tutorial from '../../components/Tutorial/Tutorial.component'
+import { Container } from './Tutorials.styles'
 
 const Tutorials = () => {
     const [searchParams] = useSearchParams()

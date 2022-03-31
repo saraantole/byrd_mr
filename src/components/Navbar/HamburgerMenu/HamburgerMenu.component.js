@@ -2,7 +2,7 @@ import { useState } from 'react'
 import WhiteLogo from '../../../images/Logo all White.png'
 import Drone from '../../../images/Drone.png'
 import { useNavigate } from 'react-router-dom'
-import { SideMenu, Lines } from './styles'
+import { SideMenu, Lines } from './HamburgerMenu.styles'
 
 export default function HamburgerMenu() {
     const [toggleMenu, setToggleMenu] = useState(false)

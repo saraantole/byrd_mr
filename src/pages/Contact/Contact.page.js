@@ -1,4 +1,4 @@
-import { Container, Form } from './styles'
+import { Container, Form } from './Contact.styles'
 import ArrowIcon from '../../icons/ArrowIcon'
 import { useState } from 'react'
 

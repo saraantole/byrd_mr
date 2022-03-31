@@ -1,6 +1,6 @@
-import { RemoteContainer } from './styles'
+import { RemoteContainer } from './RemoteControl.styles'
 import RemoteControlImage from '../../../images/Remote.png'
-import { Tutorial, Description } from '../Design/styles'
+import { Tutorial, Description } from '../Design/Design.styles'
 
 const RemoteControl = () => {
     return (

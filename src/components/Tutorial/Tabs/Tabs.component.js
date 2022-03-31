@@ -1,4 +1,4 @@
-import { TabsContainer } from './styles'
+import { TabsContainer } from './Tabs.styles'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 
 const Tabs = () => {

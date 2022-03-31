@@ -1,4 +1,4 @@
-import { Description, Detail, Drone, Tutorial } from './styles'
+import { Description, Detail, Drone, Tutorial } from './Design.styles'
 import DroneImage from '../../../images/Drone.png'
 import Detail4 from '../../../images/detail.png'
 import PlusIcon from '../../../icons/PlusIcon'

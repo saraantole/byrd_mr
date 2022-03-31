@@ -1,8 +1,8 @@
 import Theme from './Theme'
-import Hero from './pages/Hero'
-import Tutorials from './pages/Tutorials'
-import Contact from './pages/Contact'
-import Navbar from './components/Navbar'
+import Home from './pages/Home/Home.page'
+import Tutorials from './pages/Tutorials/Tutorials.page'
+import Contact from './pages/Contact/Contact.page'
+import Navbar from './components/Navbar/Navbar.component'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Hero />} />
+          <Route path="/" element={<Home />} />
           <Route path="/tutorials" element={<Tutorials />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
