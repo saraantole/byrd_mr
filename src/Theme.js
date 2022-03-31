@@ -6,12 +6,6 @@ const theme = {
         black: '#31211B',
         orange: '#EE5F20',
         white: '#FFFFFF'
-    },
-
-    fontSizes: {
-        small: '1em',
-        medium: '2em',
-        large: '3em'
     }
 }
 

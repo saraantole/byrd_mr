@@ -4,7 +4,7 @@ import defaultLogo from '../../images/Logo.png'
 import whiteLogo from '../../images/Logo White.png'
 import FacebookIcon from '../../icons/FacebookIcon'
 import TwitterIcon from '../../icons/TwitterIcon'
-import HamburgerMenu from '../../icons/HamburgerMenu'
+import HamburgerMenu from './HamburgerMenu'
 
 const Navbar = () => {
     const url = useLocation()

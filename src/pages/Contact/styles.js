@@ -8,9 +8,13 @@ export const Container = styled.main`
     justify-content: center;
     align-items: center;
 
-    form {
-        width: 658px;
+    @media screen and (max-width: 500px) {
+        justify-content: flex-start;
     }
+`
+
+export const Form = styled.form`
+    width: 658px;
 
     label {
         font-weight: 700;
@@ -66,9 +70,7 @@ export const Container = styled.main`
     }
 
     @media screen and (max-width: 800px) {
-        form {
-            width: 85%;
-        }
+        width: 85%;
 
         textarea {
             height: 200px;
@@ -76,11 +78,7 @@ export const Container = styled.main`
     }
 
     @media screen and (max-width: 500px) {
-        justify-content: flex-start;
-
-        form {
-           margin-top: 127px;
-        }
+        margin-top: 127px;
 
         button {
             width: 100%;

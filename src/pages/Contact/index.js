@@ -1,4 +1,4 @@
-import { Container } from './styles'
+import { Container, Form } from './styles'
 import ArrowIcon from '../../icons/ArrowIcon'
 import { useState } from 'react'
 
@@ -29,7 +29,7 @@ const Contact = () => {
 
     return (
         <Container>
-            <form onSubmit={handleSubmit}>
+            <Form onSubmit={handleSubmit}>
                 <label>
                     Full Name
                     <input onChange={handleInputs} name='name' value={inputs.name} type='text' placeholder='Enter your full name' />
@@ -43,7 +43,7 @@ const Contact = () => {
                     <textarea onChange={handleInputs} name='message' value={inputs.message} placeholder='What are your plans?' />
                 </label>
                 <button type='submit'>Send Message <ArrowIcon /></button>
-            </form>
+            </Form>
         </Container>
     )
 }
