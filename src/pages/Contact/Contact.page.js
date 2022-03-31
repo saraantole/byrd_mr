@@ -4,8 +4,11 @@ import { useState } from 'react'
 
 const Contact = () => {
     const [inputs, setInputs] = useState({ name: '', email: '', message: '' })
+    const [success, setSuccess] = useState(false)
+    const [error, setError] = useState(undefined)
 
     const handleInputs = event => {
+        setError(undefined)
         const input = event.target.name
         const value = event.target.value
         setInputs(prevInputs => ({ ...prevInputs, [input]: value }))
@@ -18,12 +21,21 @@ const Contact = () => {
         const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g
         const messageRegex = /^[a-zA-Z0-9\s',.?!@;:-]+$/g
 
-        if (!inputs.name.match(nameRegex)) { return alert('Please, insert a valid name.') }
-        if (!inputs.email.match(emailRegex)) { return alert('Please, insert a valid email.') }
-        if (!inputs.message.match(messageRegex)) { return alert('Please, insert a valid message.') }
+        if (!inputs.name.match(nameRegex)) {
+            setError('Please, insert a valid name.')
+            return
+        }
+        if (!inputs.email.match(emailRegex)) {
+            setError('Please, insert a valid email.')
+            return
+        }
 
-        alert(`Hi, ${inputs.name}. Your message was submitted! You can check your console`)
-        console.log(inputs)
+        if (!inputs.message.match(messageRegex)) {
+            setError('Please, insert a valid message.')
+            return
+        }
+
+        setSuccess(true)
         // TODO: handle form submission
     }
 
@@ -43,6 +55,8 @@ const Contact = () => {
                     <textarea onChange={handleInputs} name='message' value={inputs.message} placeholder='What are your plans?' />
                 </label>
                 <button type='submit'>Send Message <ArrowIcon /></button>
+                {success && <p>Your message was submitted!</p>}
+                {error && <p id='error'>{error}</p>}
             </Form>
         </Container>
     )

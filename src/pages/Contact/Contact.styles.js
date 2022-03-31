@@ -67,6 +67,11 @@ export const Form = styled.form`
         justify-content: space-between;
         align-items: center;
         width: 224px;
+        margin-bottom: 20px;
+    }
+
+    #error {
+        color: red;
     }
 
     @media screen and (max-width: 800px) {
