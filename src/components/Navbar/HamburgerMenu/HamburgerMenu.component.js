@@ -16,7 +16,7 @@ export default function HamburgerMenu() {
     return (
         <>
             <SideMenu toggleMenu={toggleMenu}>
-                <img width={176} height={26} src={WhiteLogo} alt='logo' />
+                <img onClick={() => handlePageChange('/')} width={176} height={26} src={WhiteLogo} alt='logo' />
                 <div>
                     <img src={Drone} alt='drone' />
                     <ul>
@@ -27,7 +27,7 @@ export default function HamburgerMenu() {
                     </ul>
                 </div>
             </SideMenu>
-            <Lines toggleMenu={toggleMenu} onClick={() => setToggleMenu(!toggleMenu)}>
+            <Lines data-testid='hamburger' toggleMenu={toggleMenu} onClick={() => setToggleMenu(!toggleMenu)}>
                 <span />
                 <span />
             </Lines>
