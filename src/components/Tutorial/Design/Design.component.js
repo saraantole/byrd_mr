@@ -21,7 +21,7 @@ const DroneDesign = () => {
             </Drone>
             {
                 detail && <Detail>
-                    <CrossIcon action={() => handleDetail(undefined)} />
+                    <CrossIcon data-testid='x-icon' action={() => handleDetail(undefined)} />
                     <img src={Detail4} alt='drone details' />
                 </Detail>
             }

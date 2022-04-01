@@ -16,9 +16,9 @@ const Tabs = () => {
 
     return (
         <TabsContainer>
-            <li className={!query ? 'active' : null} onClick={() => handleTutorials(undefined)} />
-            <li className={query === 'camera' ? 'active' : null} onClick={() => handleTutorials('camera')} />
-            <li className={query === 'remote-control' ? 'active' : null} onClick={() => handleTutorials('remote-control')} />
+            <li data-testid='tab-1' className={!query ? 'active' : null} onClick={() => handleTutorials(undefined)} />
+            <li data-testid='tab-2' className={query === 'camera' ? 'active' : null} onClick={() => handleTutorials('camera')} />
+            <li data-testid='tab-3' className={query === 'remote-control' ? 'active' : null} onClick={() => handleTutorials('remote-control')} />
         </TabsContainer>
     )
 }

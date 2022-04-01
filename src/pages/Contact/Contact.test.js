@@ -13,12 +13,12 @@ const theme = {
     }
 }
 
+const nameValue = 'John Doe'
+const emailValue = 'john.doe@gmail.com'
+const messageValue = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur sapien a urna suscipit, sit amet egestas mi egestas. Donec maximus tortor sit amet nisi cursus dapibus. Ut facilisis sem eu augue maximus eleifend. Vestibulum vitae sapien ut sem rutrum accumsan. Mauris aliquet lacus nec purus aliquam bibendum.'
+
 describe('Contact page', () => {
     let component
-
-    const nameValue = 'John Doe'
-    const emailValue = 'john.doe@gmail.com'
-    const messageValue = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur sapien a urna suscipit, sit amet egestas mi egestas. Donec maximus tortor sit amet nisi cursus dapibus. Ut facilisis sem eu augue maximus eleifend. Vestibulum vitae sapien ut sem rutrum accumsan. Mauris aliquet lacus nec purus aliquam bibendum.'
 
     beforeEach(() => {
         component = render(
@@ -55,7 +55,6 @@ describe('Contact page', () => {
         const emailInput = component.getByPlaceholderText('Enter your email')
         const messageInput = component.getByPlaceholderText('What are your plans?')
         const submitButton = component.getByText('Send Message')
-        // const error = component.container.querySelector('#error');
 
         userEvent.type(nameInput, nameValue)
         userEvent.type(emailInput, emailValue)
